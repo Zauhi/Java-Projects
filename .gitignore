@@ -1,0 +1,17 @@
+# Eclipse
+.metadata/
+bin/
+target/
+.classpath
+.project
+.settings/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Outros
+*.tmp
+*.bak
