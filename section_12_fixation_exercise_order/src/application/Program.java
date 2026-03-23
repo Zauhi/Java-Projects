@@ -50,14 +50,15 @@ public class Program {
 			System.out.print("Quantity: ");
 			int quantity = sc.nextInt();
 			
-			OrderItem item = new OrderItem(quantity, new Product(productName, price));
+			OrderItem oi1 = new OrderItem(quantity, price, new Product(productName, price));
 			
-			o1.addItem(item);
+			o1.addItem(oi1);
 		}
 		
 		System.out.println();
 		System.out.println("ORDER SUMMARY:");
 		System.out.print(o1);
+		
 		sc.close();
 	}
 
