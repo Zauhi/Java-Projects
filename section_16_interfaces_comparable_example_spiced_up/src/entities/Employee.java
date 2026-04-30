@@ -30,8 +30,8 @@ public class Employee implements Comparable<Employee> {
 	public int compareTo(Employee other) { 
 		return name.compareTo(other.getName()); //Alphabetic order
 //		return -name.compareTo(other.getName()); Inverse alphabetic order
-//		return salary.compareTo(other.getSalary()); Increasing salary order 
-//		return -salary.compareTo(other.getSalary()); Decreasing salary order
+//		return salary.compareTo(other.getSalary()); Ascending salary order 
+//		return -salary.compareTo(other.getSalary()); Descending salary order
 	}
 	
 }

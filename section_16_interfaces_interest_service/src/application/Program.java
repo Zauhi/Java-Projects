@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import entities.BrazilInterestService;
 import entities.InterestService;
-import entities.UsInterestService;
+import entities.UsaInterestService;
 
 public class Program {
 
@@ -28,8 +28,8 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("---US---");
-		InterestService serviceUS = new UsInterestService();
-		payment = serviceUS.payment(amount, months);
+		InterestService serviceUSA = new UsaInterestService();
+		payment = serviceUSA.payment(amount, months);
 		System.out.println("Payment after " + months + " months:");
 		System.out.println(String.format("%.2f", payment));
 		

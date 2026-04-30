@@ -8,15 +8,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 
 import entities.Employee;
 
 public class Program {
 
 	public static void main(String[] args) {
-
-		Locale.setDefault(Locale.US);
 
 		// To spice up I'll create the file, hard coding the values in vectors
 
@@ -27,18 +24,23 @@ public class Program {
 		String path = "C:\\temp\\in.txt";
 		List<Employee> list = new ArrayList<>();
 
-		// Writing a new file
+		System.out.println("Writing a new file...");
+		System.out.println();
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+
 			for (int i = 0; i < names.length; i++) {
 				bw.write(names[i] + "," + salaries[i]);
 				bw.newLine();
 			}
-			System.out.println("in.txt created");
+			System.out.println(path + " created");
+
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
 
-		// Reading the file created
+		System.out.println();
+		System.out.println("Reading the file created...");
+		System.out.println();
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
 			String line = br.readLine();
@@ -53,6 +55,7 @@ public class Program {
 			for (Employee emp : list) {
 				System.out.println(emp.getName() + ", " + emp.getSalary());
 			}
+
 		} catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
